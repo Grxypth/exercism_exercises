@@ -6,7 +6,16 @@ module Port
   end
 
   def self.get_terminal(ship_identifier)
-    raise "Please implement the Port.get_terminal method"
+    ship_id = ship_identifier.to_s[0, 3]
+    case
+    when ship_id == "OIL" || ship_id == "GAS"
+      terminal = "A"
+      terminal.to_sym 
+    end
+    else
+      terminal = "B"
+      terminal.to_sym
+    end
   end
 end
 
