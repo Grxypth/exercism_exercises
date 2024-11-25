@@ -10,5 +10,4 @@ class Hamming
 end
 
 ## bir stringi .chars methodu ile karakterlerine ayırabiliriz.
-## her iki kelimenin uzunluğu eşit olmak zorunda olmak için kelimelerin karakterlerinden oluşan dizilerin elemanlarının sıra numalararı aynı, bu sıra numaralarına göre
-## karşılaştırma yaparak aynı olup olmadığını kontrol edip, aynı olmadığı durumda sayacımızı +1 arttırıyoruz.
+## her iki kelimenin uzunluğu eşit olmak zorunda olmak için kelimelerin karakterlerinden oluşan dizilerin elemanlarının sıra numalararı aynı, bu sıra numaralarına göre karşılaştırma yaparak aynı olup olmadığını kontrol edip, aynı olmadığı durumda sayacımızı +1 arttırıyoruz.
