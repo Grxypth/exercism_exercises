@@ -18,13 +18,15 @@ class Moviegoer
 
   # Popcorn is 🍿
   def claim_free_popcorn!
-@member==true  ? "free popcorn"   : raise NotMovieClubMemberError
+    @member==true  ? "🍿"  : (raise NotMovieClubMemberError)
   end
 end
+
 
 
 
 ##ternary operatör ile if else ifadesini daha kısa bir şekilde yazabiliriz.
 ## koşul ? doğru ihtimal : yanlış ihtimal şeklinde kullanılınır
 ## yanlış koşul else içerisine yazdığımız ifade doğru koşul ise if içerisine yazdığımız ifade
-## bir class içerisinde 
+## bir raise ifadesini bir karşılaştırma durumunda kullanırken raise ettiğimiz class da parantez içinde olmalıdır çünkü parantez içerisinde kullanmazsak "raise InsertErrorHere"  ifadesi tek bir ifade olarak algılanmaz.
+# 
