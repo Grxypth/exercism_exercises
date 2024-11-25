@@ -1,3 +1,4 @@
+# This is a custom exception that you can use in your code
 class NotMovieClubMemberError < RuntimeError
 end
 
@@ -9,17 +10,18 @@ class Moviegoer
 
   def ticket_price
     @age>=60 ? price=10 : price=15
-    end
+  end
 
   def watch_scary_movie?
-    raise 'Please implement the Moviegoer#watch_scary_movie method'
+@age>=18 ? true : false
   end
 
   # Popcorn is 🍿
   def claim_free_popcorn!
-    raise 'Please implement the Moviegoer#claim_free_popcorn method'
+@member==true  ? "free popcorn"   : raise NotMovieClubMemberError
   end
 end
+
 
 
 ##ternary operatör ile if else ifadesini daha kısa bir şekilde yazabiliriz.
