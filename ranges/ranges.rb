@@ -4,12 +4,12 @@ module Chess
 
   def self.valid_square?(rank, file)
     is_valid_file = false
-    files.each do |fle|
+    FILES.each do |fle|
       fle == file ? is_valid_file = true : is_valid_file = false
       is_valid_file
     end
     is_valid_rank = false
-    ranks.each do |rnk|
+    RANKS.each do |rnk|
       rnk == rank ? is_valid_rank = true : is_valid_rank = false
       is_valid_rank
     end
@@ -26,3 +26,6 @@ module Chess
 end
 
 ## burda files ve ranks için bir range tanımladım ve sonra method içerisinde verilen rank ve file değerlerinin bu range içerisinde olup olmadığını kontrol ettim.
+## constantlar çağırılırkende büyük harf ile yazılmalarına gerek vardır(bunu unutmam hata yapmama sebep oldu)
+## ternary operatör kullanmam gereken yerde if else kullanmam gerektiğini fark ettim çünkü ternary operatörü "else" durumunuda ele alıyor buda is_valid_file/is_valid_rank sonucunu true bulmama rağmen loop tekrar döndüğünde değerin üzerine yazılmasına sebep oldu
+## dolayısıyla burda tekil bir if ifadesini bir break ifadesi ile kullanmanın daha doğru olacağı sonucuna vardım.
