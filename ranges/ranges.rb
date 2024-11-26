@@ -5,12 +5,18 @@ module Chess
   def self.valid_square?(rank, file)
     is_valid_file = false
     FILES.each do |fle|
-      fle == file ? is_valid_file = true : is_valid_file = false
+      if fle == file
+        is_valid_file = true
+        break
+      end
       is_valid_file
     end
     is_valid_rank = false
     RANKS.each do |rnk|
-      rnk == rank ? is_valid_rank = true : is_valid_rank = false
+      if rnk == rank
+        is_valid_rank = true
+        break
+      end
       is_valid_rank
     end
     is_valid_rank && is_valid_file
