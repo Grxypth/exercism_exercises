@@ -27,7 +27,9 @@ module Blackjack
   end
 
   def self.card_range(card1, card2)
-    case (card1.parse_card + card2.parse_card)
+    total = parse_card(card1) + parse_card(card2)
+
+    case total
     when 4..11
       "low"
     when 12..16
@@ -36,11 +38,39 @@ module Blackjack
       "high"
     when 21
       "blackjack"
+    else
+      "out of range"
     end
   end
 
   def self.first_turn(card1, card2, dealer_card)
-    raise "Please implement the Blackjack.first_turn method"
+    total = parse_card(card1) + parse_card(card2)
+    dealer_value = parse_card(dealer_card)
+
+    case
+    when card1 == "ace" && card2 == "ace"
+      "P"
+    when total == 21
+      case dealer_value
+      when 10, 11
+        "S"
+      else
+        "W"
+      end
+    when total >= 17 && total <= 20
+      "S"
+    when total >= 12 && total <= 16
+      case dealer_value
+      when 7..11
+        "H"
+      else
+        "S"
+      end
+    when total <= 11
+      "H"
+    else
+      "S"
+    end
   end
 end
 
