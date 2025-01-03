@@ -19,3 +19,6 @@ class IsbnVerifier
     return sum % 11 == 0
   end
 end
+
+value = IsbnVerifier.valid?("978 - 605 - 133 - 9")
+puts value
