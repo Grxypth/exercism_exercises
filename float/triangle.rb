@@ -32,7 +32,17 @@ end
     end
     
     
-    def scalene
+    def scalene?
+      if triangularize != false
+        hash=triangularize
+       else
+        return false
+       end
+      if hash[:a]!=hash[:b] && hash[:b]!=hash[:c] && hash[:a]!=hash[:c]
+        return true
+      else
+        return false
+      end
     end
     
     def triangularize
