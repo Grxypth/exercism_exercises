@@ -5,7 +5,11 @@ class Triangle
    
    
     def equilateral?
-     hash=triangularize
+     if triangularize != false
+      hash=triangularize
+     else
+      return false
+     end
       if hash[:a]==hash[:b] && hash[:b]==hash[:c]
         return true
       else
