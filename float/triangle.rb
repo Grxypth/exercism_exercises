@@ -1,3 +1,6 @@
+##BU alıştırmada bir üçgenin eşkenar,ikizkenar ve çeşitkenar olup olmadığını belirleyen bir sınıf oluşturulması istenmektedir.
+
+
 class Triangle
   def initialize(sides)
   @sides=sides
@@ -57,4 +60,6 @@ end
   
   
   end
+  
+
   
