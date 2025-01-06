@@ -2,7 +2,7 @@
 ##karelerin toplamı için  [n(n+1)(2n+1)]/6 formülünü kullanacağım.
 ##toplamların karesi için ise n^2(n+1)^2/4 formülünü kullanacağım
 
-class DiffrenceOfSquares
+class Squares
 
 def initialize(number)
   @number=number
