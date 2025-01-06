@@ -17,9 +17,22 @@ class Triangle
   end
   
     end
-    def isosceles?(a,b,c)
+    def isosceles?
+      if triangularize != false
+        hash=triangularize
+       else
+        return false
+       end
+
+ if hash[:a]==hash[:b] || hash[:b]==hash[:c] || hash[:a]==hash[:c]
+  return true
+else
+  return false
+end
     end
-    def scalene(a,b,c)
+    
+    
+    def scalene
     end
     
     def triangularize
