@@ -18,5 +18,5 @@ end
   def scalene(a,b,c)
   end
 
-
+.
 end
