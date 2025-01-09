@@ -1,19 +1,23 @@
 class ListOps
-  def arrays
+  def self.arrays(obj)
   end
 
-  def reverser(arr)
+  def self.reverser(arr)
+    arr.reverse
   end
 
-  def concantter(input1, input2)
+  def self.concantter(input1, input2)
   end
 
-  def mapper()
+  def self.mapper()
   end
 
-  def sum_reducer
+  def self.sum_reducer
   end
 
-  def factorial_reducer(input)
+  def self.filterer(arr)
+  end
+
+  def self.factorial_reducer(input)
   end
 end
