@@ -1,5 +1,8 @@
 class ListOps
-  def self.arrays(obj)
+  def self.arrays(arr)
+    count = 0
+    arr.each { |num| count += 1 }
+    count
   end
 
   def self.reverser(arr)
