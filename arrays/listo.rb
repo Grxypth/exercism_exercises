@@ -31,3 +31,7 @@ end
         input.reduce(1){ |num1, num2| num1 * num2 }
   end
 end
+
+
+##Bu alıştırmada liste operasyonlarını gerçekleştiren methodlar yazıyoruz.
+## array elemanlarını sayma, elemanları ters şekilde sıralama, iki diziyi birleştirme gibi işlemler yapıyoruz.
